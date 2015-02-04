@@ -2,7 +2,7 @@ package net.sharksystem.apps.broker;
 
 import java.io.IOException;
 import net.sharkfw.kep.SharkProtocolNotSupportedException;
-import net.sharkfw.kp.HubKP;
+import net.sharkfw.kp.BrokerKP;
 import net.sharkfw.peer.J2SEAndroidSharkEngine;
 import net.sharkfw.peer.SharkEngine;
 
@@ -16,7 +16,7 @@ public class SharkBrokerCmdLine {
     
     public static void main(String[] args) throws SharkProtocolNotSupportedException, IOException, InterruptedException {
         SharkEngine se = new J2SEAndroidSharkEngine();
-        HubKP hub = new HubKP(se, ONE_HOUR);
+        BrokerKP hub = new BrokerKP(se, ONE_HOUR);
         
         se.startTCP(PORT);
         
